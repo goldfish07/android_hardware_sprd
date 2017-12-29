@@ -18,6 +18,6 @@
 LOCAL_PATH := $(call my-dir)
 
 ifenq ( $(filter SOC_SPRD),true)
-include (call all-makefiles-under,sprddroid)
+include $(call all-makefiles-under,sprddroid)
 endif
 
