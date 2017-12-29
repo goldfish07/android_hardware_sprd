@@ -17,7 +17,7 @@
 LOCAL_PATH:= $(call my-dir)
 # HAL module implemenation stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
-ifneq ($(strip $(TARGET_SUPPORT_ADF_DISPLAY)),true)
+#ifneq ($(strip $(TARGET_SUPPORT_ADF_DISPLAY)),true)
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)),sc8830)
 DEVICE_WITH_GSP := true

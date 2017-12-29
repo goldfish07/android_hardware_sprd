@@ -17,7 +17,7 @@ LOCAL_PATH := $(call my-dir)
 
 # HAL module implemenation stored in
 # hw/<OVERLAY_HARDWARE_MODULE_ID>.<ro.product.board>.so
-ifneq ($(strip $(TARGET_SUPPORT_ADF_DISPLAY)),true)
+#ifneq ($(strip $(TARGET_SUPPORT_ADF_DISPLAY)),true)
 ifeq ($(strip $(USE_SPRD_HWCOMPOSER)),true)
 
 include $(CLEAR_VARS)
@@ -42,13 +42,13 @@ LOCAL_SRC_FILES := SprdHWComposer.cpp \
 		   SprdUtil.cpp \
                    dump.cpp
 LOCAL_C_INCLUDES := \
-	$(TOP)/vendor/sprd/open-source/libs/libmemoryheapion \
+	$(TOP)/hardware/sprd/open-source/libs/libmemoryheapion \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video \
 
 ifeq ($(strip $(TARGET_GPU_PLATFORM)),midgard)
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/midgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/modules/libgpu/gralloc/midgard
 else
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/utgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/modules/libgpu/gralloc/utgard
 endif
 
 LOCAL_MODULE := hwcomposer.$(TARGET_BOARD_PLATFORM)

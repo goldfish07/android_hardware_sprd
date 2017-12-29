@@ -30,9 +30,9 @@ LOCAL_C_INCLUDES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL/source/include/video 
 
 ifeq ($(strip $(TARGET_GPU_PLATFORM)),midgard)
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/midgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/midgard
 else
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/utgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/utgard
 endif
 
 LOCAL_SRC_FILES:= \

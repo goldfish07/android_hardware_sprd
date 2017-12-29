@@ -9,9 +9,9 @@ LOCAL_C_INCLUDES := \
           frameworks/av/media/libstagefright/include \
 	  frameworks/av/media/libstagefright/codecs/mp3dec_sprd   \
 	  frameworks/av/include/media/stagefright \
-	  $(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include \
-	  $(TOP)/vendor/sprd/open-source/libs/libmemoryheapion \
-	  $(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax
+	  $(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include \
+	  $(TOP)/hardware/sprd/libmemoryheapion/sprddroid \
+	  $(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax
 
 LOCAL_CFLAGS := -DOSCL_EXPORT_REF= -DOSCL_IMPORT_REF=
 

@@ -24,15 +24,15 @@ LOCAL_C_INCLUDES := \
                 external/sqlite/dist \
                 system/media/camera/include \
                 $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/source/include/video \
-                $(TOP)/vendor/sprd/open-source/libs/libmemoryheapion
+                $(TOP)/hardware/sprd/libmemoryheapion/sprddroid
 
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 ifeq ($(strip $(TARGET_GPU_PLATFORM)),midgard)
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/midgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/midgard
 else
-LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/utgard
+LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/utgard
 endif
 
 include $(shell find $(LOCAL_PATH) -name 'Sprdroid.mk')

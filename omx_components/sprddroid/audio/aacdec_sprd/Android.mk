@@ -10,8 +10,8 @@ LOCAL_C_INCLUDES := \
           frameworks/av/media/libstagefright/include \
 	  media/libstagefright/codecs/aacdec_sprd   \
 	  frameworks/av/include/media/stagefright \
-	  $(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include \
-	  $(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax
+	  $(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include \
+	  $(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax
 
 LOCAL_CFLAGS := -DOSCL_EXPORT_REF= -DOSCL_IMPORT_REF= -D_AACARM_  -D_ARMNINEPLATFORM_  -DAAC_DEC_LITTLE_ENDIAN
 

@@ -6,7 +6,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_C_INCLUDES := \
         frameworks/av/media/libstagefright/include \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax
 
 LOCAL_SHARED_LIBRARIES := \
         libstagefright libstagefright_omx libstagefright_foundation libutils liblog

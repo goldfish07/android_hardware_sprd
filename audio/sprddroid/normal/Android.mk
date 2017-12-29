@@ -13,7 +13,6 @@
 # limitations under the License.
 
 ifeq ($(strip $(BOARD_USES_TINYALSA_AUDIO)),true)
-ifneq ($(strip $(USE_AUDIO_WHALE_HAL)),true)
 LOCAL_PATH := $(call my-dir)
 
 #TinyAlsa audio

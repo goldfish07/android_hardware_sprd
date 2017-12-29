@@ -10,14 +10,14 @@ LOCAL_CFLAGS := $(PV_CFLAGS_MINUS_VISIBILITY)
 
 LOCAL_C_INCLUDES := \
 	$(TOP)/frameworks/native/include/media/hardware \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax \
-	$(TOP)/vendor/sprd/open-source/libs/libmemoryheapion
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include \
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax \
+	$(TOP)/hardware/sprd/libmemoryheapion/sprddroid
 
 ifeq ($(strip $(TARGET_GPU_PLATFORM)),midgard)
-    LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/midgard
+    LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/midgard
 else
-    LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/utgard
+    LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/utgard
 endif
 
 LOCAL_SHARED_LIBRARIES :=       \
