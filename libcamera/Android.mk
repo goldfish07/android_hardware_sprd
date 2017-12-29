@@ -21,8 +21,8 @@ supported_boards := \
 	sc8810 \
 	scx15 \
 
-ifneq (,$(filter $(supported_boards),$(TARGET_BOARD_PLATFORM)))
-include $(call all-named-subdir-makefiles,$(TARGET_BOARD_PLATFORM))
+ifneq ($(SOC_SPRD),true)
+include $(call all-named-subdir-makefiles,sprddroid)
 endif
 
 ifeq ($(SOC_SCX30G_V2),true)
