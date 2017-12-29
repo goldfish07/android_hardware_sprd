@@ -18,6 +18,6 @@
 LOCAL_PATH := $(call my-dir)
 
 
-ifneq (,$(filter SOC_KANAS),true)
+ifneq ($(SOC_KANAS),true)
 include $(call all-makefiles-under,kanas)
 endif

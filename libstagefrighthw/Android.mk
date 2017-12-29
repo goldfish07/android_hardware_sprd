@@ -15,12 +15,8 @@
 # limitations under the License.
 #
 
-supported_boards := \
-	sc8830 \
-	scx15 \
+LOCAL_PATH := $(call my-dir)
 
-ifeq ($(SOC_SCX30G_V2),true)
-include $(call all-named-subdir-makefiles,sc8830)
-else ifneq (,$(filter $(supported_boards),$(TARGET_BOARD_PLATFORM)))
-include $(call all-named-subdir-makefiles,scx15)
+ifneq ($(SOC_SPRD),true)
+include $(call all-named-subdir-makefiles,sprddroid)
 endif

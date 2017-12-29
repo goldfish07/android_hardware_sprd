@@ -18,6 +18,6 @@
 LOCAL_PATH := $(call my-dir)
 
 
-ifneq (,$(filter SOC_SPRD),true)
+ifneq ($(SOC_SPRD),true)
 include $(call all-makefiles-under,composer)
 endif

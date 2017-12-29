@@ -22,7 +22,7 @@ supported_boards := \
 	scx15 \
 	sc8810 \
 
-ifneq ($(SOC_SCX35),true)
+ifneq ($(SOC_KANAS),true)
 include $(call all-makefiles-under,kanas)
 endif 
 

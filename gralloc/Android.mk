@@ -17,12 +17,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-supported_boards := \
-	sc8830 \
-	scx15 \
-	sc8810 \
 
-ifneq (,$(filter SOC_SPRD,true)
+
+ifneq ($(SOC_SPRD,true)
 include $(call all-makefiles-under,sprddroid)
 endif
 
