@@ -17,15 +17,19 @@
 
 LOCAL_PATH := $(call my-dir)
 
-supported_boards := \
-	sc8830 \
-	scx15 \
-	sc8810 \
 
-ifneq ($(SOC_KANAS),true)
+ifneq ($(SOC_KANAS_AUDIO),true)
 include $(call all-makefiles-under,kanas)
 endif 
 
 ifneq ($(SOC_SPRD),true)
 include $(call all-makefiles-under,sprddroid)
 endif
+
+ifneq ($(SOC_SCX15),true)
+include $(call all-makefiles-under,scx15)
+endif
+
+ifneq ($(SOC_SCX35),true)
+include $(call all-makefiles-under,sc8830)
+endif 
