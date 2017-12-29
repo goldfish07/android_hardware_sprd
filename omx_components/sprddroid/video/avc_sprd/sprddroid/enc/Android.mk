@@ -8,15 +8,15 @@ LOCAL_C_INCLUDES := \
         frameworks/av/media/libstagefright/include \
 	frameworks/native/include/media/hardware \
 	frameworks/native/include \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax \
-	$(TOP)/vendor/sprd/open-source/libs/libmemoryheapion \
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include \
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax \
+	$(TOP)/hardware/sprd/libmemoryheapion/sprddroid \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video
 
 ifeq ($(strip $(TARGET_GPU_PLATFORM)),midgard)
-    LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/midgard
+    LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/midgard
 else
-    LOCAL_C_INCLUDES += $(TOP)/vendor/sprd/modules/libgpu/gralloc/utgard
+    LOCAL_C_INCLUDES += $(TOP)/hardware/sprd/gralloc/sprddroid/utgard
 endif
 
 LOCAL_CFLAGS := -DOSCL_EXPORT_REF= -DOSCL_IMPORT_REF=

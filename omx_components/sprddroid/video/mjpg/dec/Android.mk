@@ -8,7 +8,7 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES := \
 	external/jpeg \
         frameworks/av/media/libstagefright/include \
-	$(TOP)/vendor/sprd/open-source/libs/libstagefrighthw/include/openmax
+	$(TOP)/hardware/sprd/libstagefrighthw/sprddroid/include/openmax
 
 LOCAL_CFLAGS := -DOSCL_EXPORT_REF= -DOSCL_IMPORT_REF=
 
