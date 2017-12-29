@@ -22,13 +22,10 @@ supported_boards := \
 	scx15 \
 	sc8810 \
 
-ifneq (,$(filter SOC_SCX35),true)
+ifneq ($(SOC_SCX35),true)
 include $(call all-makefiles-under,kanas)
 endif 
 
-ifeq (,$(filter SOC_SPRD),true)
+ifneq ($(SOC_SPRD),true)
 include $(call all-makefiles-under,sprddroid)
-else
-ifneq (,$(filter $(supported_boards),$(TARGET_BOARD_PLATFORM)))
-include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
