@@ -17,11 +17,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-supported_boards := \
-	sc8830 \
-	scx15 \
-	sc8810 \
 
-ifneq (,$(filter $(supported_boards),$(TARGET_BOARD_PLATFORM)))
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifneq (,$(filter SOC_KANAS),true)
+include $(call all-makefiles-under,kanas)
 endif
