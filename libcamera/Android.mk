@@ -15,11 +15,8 @@
 # limitations under the License.
 #
 
-#LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
-supported_boards := \
-	sc8810 \
-	scx15 \
 
 ifneq ($(SOC_SPRD),true)
 include $(call all-named-subdir-makefiles,sprddroid)
