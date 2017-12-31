@@ -18,9 +18,8 @@
 LOCAL_PATH := $(call my-dir)
 
 
-
 ifneq ($(SOC_SPRD),true)
-include $(call all-makefiles-under,sprddroid)
+include $(call all-named-subdir-makefiles,sprddroid)
 endif
 
 
