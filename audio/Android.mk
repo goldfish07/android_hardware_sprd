@@ -23,7 +23,7 @@ include $(call all-makefiles-under,kanas)
 endif 
 
 ifneq ($(SOC_SPRD),true)
-include $(call all-makefiles-under,sprddroid)
+include $(call all-named-subdir-makefiles,sprddroid)
 endif
 
 ifneq ($(SOC_SCX15),true)
