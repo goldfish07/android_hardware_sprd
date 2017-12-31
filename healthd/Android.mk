@@ -17,6 +17,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(SOC_SPRD),true)
-include (call all-makefiles-under,sprddroid)
+
+ifneq ($(SOC_KANAS),true)
+include $(call all-named-subdir-makefiles,kanas)
 endif
